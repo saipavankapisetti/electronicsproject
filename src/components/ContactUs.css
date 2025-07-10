@@ -1,0 +1,68 @@
+/* Contact Us Section Styles */
+.contact {
+  background: var(--page-bg);
+  color: var(--text-color);
+  padding: 80px 0;
+  position: relative;
+}
+
+.contact-title {
+  font-size: 3rem;
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: var(--glow-cyan);
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 230, 118, 0.2);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 247, 0.3);
+  border-radius: 8px;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--button-primary);
+  box-shadow: var(--glow-green);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--description-text);
+}
+
+.contact-submit-btn {
+  background: var(--gradient-primary);
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-green);
+}

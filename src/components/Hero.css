@@ -1,0 +1,326 @@
+/* Hero Section Styles */
+.hero {
+  background: var(--page-bg);
+  color: var(--text-color);
+  min-height: 100vh;
+  padding: 120px 0 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.quantum-particles .particle {
+  background: var(--accent-color);
+  border-radius: 50%;
+  animation: float 5s ease-in-out infinite, pulse 4s infinite;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--title-color);
+  text-shadow: var(--glow-green);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--subtitle-color);
+  text-shadow: var(--glow-magenta);
+}
+
+.hero-buttons a {
+  margin: 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.stat {
+  margin: 0 20px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--button-primary);
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--description-text);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.scroll-arrow {
+  border: solid var(--text-color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(45deg);
+  animation: float 1s ease-in-out infinite;
+}
+
+/* Hero Layout */
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-text {
+  text-align: left;
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 35px;
+  margin: 0 10px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  border: 2px solid transparent;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--glow-green);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--button-primary);
+  border: 2px solid var(--button-primary);
+}
+
+.btn-secondary:hover {
+  background: var(--button-primary);
+  color: white;
+  box-shadow: var(--glow-green);
+}
+
+/* Circuit Board Animation */
+.hero-visual {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantum-circuit {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.circuit-board {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 247, 0.05);
+  border-radius: 20px;
+  border: 2px solid rgba(0, 255, 247, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.circuit-line {
+  position: absolute;
+  background: linear-gradient(90deg, var(--button-primary), var(--title-color));
+  animation: circuit-pulse 2s ease-in-out infinite;
+}
+
+.circuit-line.horizontal {
+  height: 2px;
+  width: 200px;
+}
+
+.circuit-line.vertical {
+  width: 2px;
+  height: 200px;
+}
+
+.line-1 {
+  top: 30%;
+  left: 20%;
+}
+
+.line-2 {
+  top: 70%;
+  left: 30%;
+}
+
+.line-3 {
+  left: 60%;
+  top: 20%;
+}
+
+.line-4 {
+  left: 80%;
+  top: 40%;
+}
+
+@keyframes circuit-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    box-shadow: 0 0 5px var(--button-primary);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 20px var(--button-primary), 0 0 40px var(--title-color);
+  }
+}
+
+.quantum-gate {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: var(--gradient-secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: quantum-spin 4s linear infinite;
+}
+
+.gate-1 {
+  top: 25%;
+  left: 40%;
+}
+
+.gate-2 {
+  top: 65%;
+  left: 50%;
+}
+
+.gate-3 {
+  top: 45%;
+  left: 75%;
+}
+
+@keyframes quantum-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.gate-pulse {
+  width: 20px;
+  height: 20px;
+  background: var(--subtitle-color);
+  border-radius: 50%;
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+    box-shadow: var(--glow-magenta);
+  }
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 2rem;
+  color: var(--subtitle-color);
+  animation: float 3s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(2) {
+  animation-delay: -1s;
+}
+
+.floating-icon:nth-child(3) {
+  animation-delay: -2s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .hero-text {
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-visual {
+    height: 300px;
+  }
+  
+  .quantum-circuit {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

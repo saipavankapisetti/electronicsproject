@@ -1,0 +1,80 @@
+/* Navbar Styles */
+.navbar {
+  background: var(--page-bg);
+  color: var(--text-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-logo .logo-main {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--title-color);
+}
+
+.nav-logo .logo-sub {
+  font-size: 0.75rem;
+  color: var(--subtitle-color);
+}
+
+.nav-menu {
+  display: none;
+}
+
+.nav-icon {
+  color: var(--button-primary);
+  margin-left: 20px;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  color: var(--button-primary);
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: block;
+  }
+  .mobile-menu-toggle {
+    display: block;
+  }
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  margin: 0 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link:hover {
+  color: var(--button-primary);
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--button-primary);
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}

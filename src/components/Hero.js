@@ -4,21 +4,20 @@ import { FaRocket, FaMicrochip, FaAtom } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
-  const floatingElements = [
-    { icon: FaRocket, delay: 0, x: 100, y: 50 },
-    { icon: FaMicrochip, delay: 1, x: -80, y: 100 },
-    { icon: FaAtom, delay: 2, x: 120, y: -30 },
-  ];
-
   return (
     <section id="home" className="hero">
       <div className="hero-background">
         <div className="quantum-particles">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(10)].map((_, i) => (
             <div
               key={i}
               className="particle"
               style={{
+                position: 'absolute',
+                width: '4px',
+                height: '4px',
+                background: '#00E676',
+                borderRadius: '50%',
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 3}s`,
@@ -44,7 +43,8 @@ const Hero = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
             >
               Welcome to the
-              <span className="gradient-text"> Electronics Universe</span>
+              <br />
+              <span className="gradient-text">⚡ Electronics Universe ⚡</span>
             </motion.h1>
             
             <motion.p
@@ -53,8 +53,9 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Dive into the fascinating world of quantum computing, advanced electronics, 
-              and cutting-edge technology. Perfect for students ready to explore the future.
+              🔬 Dive into the fascinating world of quantum computing, neural networks, 
+              and cutting-edge semiconductor technology. Perfect for students ready to 
+              explore the future of electronics and AI! 🚀
             </motion.p>
 
             <motion.div
@@ -79,15 +80,15 @@ const Hero = () => {
             >
               <div className="stat">
                 <span className="stat-number">500+</span>
-                <span className="stat-label">Projects</span>
+                <span className="stat-label">🔧 Projects</span>
               </div>
               <div className="stat">
                 <span className="stat-number">10K+</span>
-                <span className="stat-label">Students</span>
+                <span className="stat-label">👨‍🎓 Students</span>
               </div>
               <div className="stat">
                 <span className="stat-number">50+</span>
-                <span className="stat-label">Universities</span>
+                <span className="stat-label">🏫 Universities</span>
               </div>
             </motion.div>
           </motion.div>
@@ -117,19 +118,36 @@ const Hero = () => {
               </div>
             </div>
 
-            {floatingElements.map((element, index) => (
-              <motion.div
-                key={index}
-                className="floating-icon"
-                style={{ left: element.x, top: element.y }}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: element.delay, duration: 0.5 }}
-                whileHover={{ scale: 1.2, rotate: 360 }}
-              >
-                <element.icon />
-              </motion.div>
-            ))}
+            <motion.div
+              className="floating-icon"
+              style={{ left: '100px', top: '50px' }}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              whileHover={{ scale: 1.2, rotate: 360 }}
+            >
+              <FaRocket />
+            </motion.div>
+            <motion.div
+              className="floating-icon"
+              style={{ left: '-80px', top: '100px' }}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1, duration: 0.5 }}
+              whileHover={{ scale: 1.2, rotate: 360 }}
+            >
+              <FaMicrochip />
+            </motion.div>
+            <motion.div
+              className="floating-icon"
+              style={{ left: '120px', top: '-30px' }}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.5, duration: 0.5 }}
+              whileHover={{ scale: 1.2, rotate: 360 }}
+            >
+              <FaAtom />
+            </motion.div>
           </motion.div>
         </div>
 
